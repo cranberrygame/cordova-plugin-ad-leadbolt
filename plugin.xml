@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.cranberrygame.phonegap.plugin.ad.leadbolt"
+    version="1.0.2">
+	
+    <name>leadbolt</name>
+    <description>leadbolt</description>
+    <license>Apache 2.0</license>
+    <keywords>leadbolt</keywords>
+    <repo>https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.ad.leadbolt</repo>
+ 	
+    <!-- android -->
+<!--
+//edit your_phonegapcli_project\plugins\com.cranberrygame.phonegap.plugin.ad.leadbolt\src\android\BootReceiver.java
+...
+		intent.putExtra("sectionid", "YOUR_REENGAGEMENT_SECTION_ID");
+...		
+-->	
+    <platform name="android">
+		<!-- window.AdController.xxx(); -->
+		<!-- AdController.xxx(); -->	
+		<js-module src="www/android/AdController.js" name="AdController">
+			<clobbers target="window.AdController" />
+		</js-module>
+	
+        <config-file target="res/xml/config.xml" parent="/*">
+ 			<feature name="AdController">
+				<param name="android-package" value="com.leadbolt.phonegap.android.LBPhonegapPlugin" />
+			</feature>			
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.INTERNET"/>
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+			
+			<!-- Optional Permissions to add -->
+			<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+			<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+
+			<!-- Permissions Required if you are using App Re-Engagements -->
+			<uses-permission android:name="android.permission.WAKE_LOCK" />
+			<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+<!--		
+			<service android:name="com.<sdkpackagename>.ReEngagementService"></service>
+			<receiver android:name="com.<sdkpackagename>.ReEngagement" />
+			<service android:name="com.<sdkpackagename>.AdBootReceiverService" />
+-->
+			<service android:name="com.ceknxzqcryl.ReEngagementService"></service>
+			<receiver android:name="com.ceknxzqcryl.ReEngagement" />
+			<service android:name="com.ceknxzqcryl.AdBootReceiverService" />
+
+<!--			
+			<receiver android:name="$YOUR_APP_PACKAGE_NAME.BootReceiver">
+				<intent-filter>
+					<action android:name="android.intent.action.BOOT_COMPLETED" />
+				</intent-filter>
+			</receiver>
+-->			
+			<receiver android:name="BootReceiver">
+				<intent-filter>
+					<action android:name="android.intent.action.BOOT_COMPLETED" />
+				</intent-filter>
+			</receiver>
+        </config-file>
+		
+		<source-file src="lib/android/ceknxzqcryl.jar" target-dir="libs" />
+		<source-file src="lib/android/LBPhonegapPlugin.jar" target-dir="libs" />
+		<source-file src="src/android/BootReceiver.java" target-dir="src" />
+     </platform>
+
+	 <!-- ios -->
+<!--
+xcode-Project's Target-Build Phases-Compile Sources-JSONKit.m-"-fno-objc-arc" (without quotes)
+-->	 
+     <platform name="ios">
+		<!-- window.AdController.xxx(); -->
+		<!-- AdController.xxx(); -->	
+		<js-module src="www/ios/AdController.js" name="AdController">
+			<clobbers target="window.AdController" />
+		</js-module>
+		
+		<config-file target="config.xml" parent="/*">
+			<feature name="AdController">
+				<param name="ios-package" value="LBPhonegapPlugin" />
+				<param name="onload" value="true" />
+			</feature>			 
+		</config-file>
+		
+		<header-file src="src/ios/JSONKit.h" />
+		<header-file src="src/ios/LeadboltOverlay.h" />
+		<header-file src="src/ios/AppTracker.h" />
+		<header-file src="src/ios/LBPhonegapPlugin.h" />
+		
+		<source-file src="src/ios/JSONKit.m" />		
+		<source-file src="lib/ios/libLeadboltOverlay.a" framework="true" />		
+		<source-file src="lib/ios/libAppTracker.a" framework="true" />		
+		<source-file src="lib/ios/libLBPhonegapPlugin.a" framework="true" />		
+	</platform>
+</plugin>
