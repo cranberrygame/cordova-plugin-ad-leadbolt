@@ -1,4 +1,6 @@
 
 # com.cranberrygame.phonegap.plugin.ad.leadbolt
 
-Plugin documentation: [doc/index.md](doc/index.md)
+leadbolt phonegap plugin version
+
+get original plugin from http://www.leadbolt.com/

@@ -4,10 +4,10 @@
     id="com.cranberrygame.phonegap.plugin.ad.leadbolt"
     version="1.0.2">
 	
-    <name>leadbolt</name>
-    <description>leadbolt</description>
-    <license>Apache 2.0</license>
-    <keywords>leadbolt</keywords>
+    <name>Leadbolt</name>
+    <description>Leadbolt</description>
+    <license>MIT</license>
+    <keywords>phonegap, leadbolt</keywords>
     <repo>https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.ad.leadbolt</repo>
  	
     <!-- android -->
