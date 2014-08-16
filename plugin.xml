@@ -18,9 +18,7 @@
 ...		
 -->	
     <platform name="android">
-		<!-- window.AdController.xxx(); -->
-		<!-- AdController.xxx(); -->	
-		<js-module src="www/android/AdController.js" name="AdController">
+		<js-module src="www/android/AdController.js">
 			<clobbers target="window.AdController" />
 		</js-module>
 	
@@ -67,8 +65,8 @@
 			</receiver>
         </config-file>
 		
-		<source-file src="lib/android/ceknxzqcryl.jar" target-dir="libs" />
-		<source-file src="lib/android/LBPhonegapPlugin.jar" target-dir="libs" />
+		<source-file src="src/android/ceknxzqcryl.jar" target-dir="libs" />
+		<source-file src="src/android/LBPhonegapPlugin.jar" target-dir="libs" />
 		<source-file src="src/android/BootReceiver.java" target-dir="src" />
      </platform>
 
@@ -77,9 +75,7 @@
 xcode-Project's Target-Build Phases-Compile Sources-JSONKit.m-"-fno-objc-arc" (without quotes)
 -->	 
      <platform name="ios">
-		<!-- window.AdController.xxx(); -->
-		<!-- AdController.xxx(); -->	
-		<js-module src="www/ios/AdController.js" name="AdController">
+		<js-module src="www/ios/AdController.js">
 			<clobbers target="window.AdController" />
 		</js-module>
 		
@@ -91,13 +87,15 @@ xcode-Project's Target-Build Phases-Compile Sources-JSONKit.m-"-fno-objc-arc" (w
 		</config-file>
 		
 		<header-file src="src/ios/JSONKit.h" />
-		<header-file src="src/ios/LeadboltOverlay.h" />
-		<header-file src="src/ios/AppTracker.h" />
-		<header-file src="src/ios/LBPhonegapPlugin.h" />
-		
 		<source-file src="src/ios/JSONKit.m" />		
-		<source-file src="lib/ios/libLeadboltOverlay.a" framework="true" />		
-		<source-file src="lib/ios/libAppTracker.a" framework="true" />		
-		<source-file src="lib/ios/libLBPhonegapPlugin.a" framework="true" />		
+	
+		<header-file src="src/ios/LeadboltOverlay.h" />
+		<source-file src="src/ios/libLeadboltOverlay.a" framework="true" />		
+
+		<header-file src="src/ios/AppTracker.h" />
+		<source-file src="src/ios/libAppTracker.a" framework="true" />		
+
+		<header-file src="src/ios/LBPhonegapPlugin.h" />
+		<source-file src="src/ios/libLBPhonegapPlugin.a" framework="true" />		
 	</platform>
 </plugin>
