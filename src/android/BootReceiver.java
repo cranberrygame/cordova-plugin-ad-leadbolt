@@ -1,7 +1,7 @@
 import android.content.Context;
 import android.content.Intent;
 //import com.<sdkpackagename>.AdBootReceiver;//cranberrygame
-import com.ceknxzqcryl.AdBootReceiver;//cranberrygame
+import com.nwvlwgbwdtkfcwuk.AdBootReceiver;//cranberrygame
 public class BootReceiver extends AdBootReceiver
 {
 	public void onReceive(Context ctx, Intent intent)

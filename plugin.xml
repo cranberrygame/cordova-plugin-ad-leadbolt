@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.cranberrygame.phonegap.plugin.ad.leadbolt"
-    version="1.0.2">
+    version="1.0.3">
 	
     <name>Leadbolt</name>
     <description>Leadbolt</description>
@@ -25,49 +25,40 @@
         <config-file target="res/xml/config.xml" parent="/*">
  			<feature name="AdController">
 				<param name="android-package" value="com.leadbolt.phonegap.android.LBPhonegapPlugin" />
-			</feature>			
+			</feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
 			<uses-permission android:name="android.permission.INTERNET"/>
 			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 			
-			<!-- Optional Permissions to add -->
-			<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-			<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
-
 			<!-- Permissions Required if you are using App Re-Engagements -->
+<!--
 			<uses-permission android:name="android.permission.WAKE_LOCK" />
 			<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-        </config-file>
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
-<!--		
-			<service android:name="com.<sdkpackagename>.ReEngagementService"></service>
-			<receiver android:name="com.<sdkpackagename>.ReEngagement" />
-			<service android:name="com.<sdkpackagename>.AdBootReceiverService" />
--->
-			<service android:name="com.ceknxzqcryl.ReEngagementService"></service>
-			<receiver android:name="com.ceknxzqcryl.ReEngagement" />
-			<service android:name="com.ceknxzqcryl.AdBootReceiverService" />
-
-<!--			
-			<receiver android:name="$YOUR_APP_PACKAGE_NAME.BootReceiver">
-				<intent-filter>
-					<action android:name="android.intent.action.BOOT_COMPLETED" />
-				</intent-filter>
-			</receiver>
 -->			
+        </config-file>
+
+<!--		
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+
+			<service android:name="com.nwvlwgbwdtkfcwuk.ReEngagementService"></service>
+			<receiver android:name="com.nwvlwgbwdtkfcwuk.ReEngagement" />
+			<service android:name="com.nwvlwgbwdtkfcwuk.AdBootReceiverService" />
+	
 			<receiver android:name="BootReceiver">
 				<intent-filter>
 					<action android:name="android.intent.action.BOOT_COMPLETED" />
 				</intent-filter>
 			</receiver>
         </config-file>
+-->		
 		
-		<source-file src="src/android/ceknxzqcryl.jar" target-dir="libs" />
+		<source-file src="src/android/nwvlwgbwdtkfcwuk.jar" target-dir="libs" />
 		<source-file src="src/android/LBPhonegapPlugin.jar" target-dir="libs" />
+
+<!--		
 		<source-file src="src/android/BootReceiver.java" target-dir="src" />
+-->
      </platform>
 
 	 <!-- ios -->

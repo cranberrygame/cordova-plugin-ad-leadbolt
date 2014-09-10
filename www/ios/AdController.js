@@ -12,7 +12,7 @@ var AdController = {
         cordova.exec(successcallback, errorcallback, "AdController", "loadAdToCache", [sectionid]);
     },
     displayAd : function(successcallback, errorcallback) {
-        cordova.exec(successcallback, errorcallback, "AdController", "displayAd", [sectionid]);
+        cordova.exec(successcallback, errorcallback, "AdController", "displayAd", []);
     },
     destroyAd : function(successcallback, errorcallback) {
         cordova.exec(successcallback, errorcallback, "AdController", "destroyAd", []);
@@ -24,7 +24,7 @@ var AdController = {
         cordova.exec(successcallback, errorcallback, "AdController", "loadAudioAdToCache", [sectionid]);
     },
     playAudio : function(successcallback, errorcallback) {
-        cordova.exec(successcallback, errorcallback, "AdController", "playAudio", [sectionid]);
+        cordova.exec(successcallback, errorcallback, "AdController", "playAudio", []);
     },
     loadAudioTrack : function(sectionid, interval, successcallback, errorcallback) {
         cordova.exec(successcallback, errorcallback, "AdController", "loadAudioTrack", [sectionid, interval]);

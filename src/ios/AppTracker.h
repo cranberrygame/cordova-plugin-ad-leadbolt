@@ -47,13 +47,10 @@
 +(void) transaction:(NSString*) name value:(float)floatValue currencyCode:(NSString*)currencyCode ref:(NSString*)ref;
 +(void) transaction:(NSString*) name value:(float)floatValue currencyCode:(NSString*)currencyCode ref:(NSString*)ref instant:(BOOL)instant;
 
-// new IAP purchase functions
-+(void) initializeProductsWithIdentifiers:(NSArray *) identifiers;
-+(NSArray *) getValidProducts;
-+(void) purchaseProductWithIdentifier:(NSString *) identifier;
-
 // Module functions
 +(BOOL) loadModule:(NSString*) placement view:(UIView*)view;
++(BOOL) loadModuleToCache:(NSString*) placement view:(UIView *)view;
++(void) destroyModule;
 
 // Crash Reporting
 +(void)crashWithName:(NSString*)crashName description:(NSString*)description;
