@@ -1,51 +1,42 @@
 
 How to Install:
 
-cordova plugin add com.cranberrygame.phonegap.plugin.ad.leadbolt
-
-caution: ios
-
-xcode-Project's Target-Build Phases-Compile Sources-JSONKit.m-Compiler Flags: "-fno-objc-arc" (without quotes)
+cordova plugin add com.cranberrygame.phonegap.plugin.ad.admob.overlay
 
 How to Use:
 
-var appAdAlertSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_ALERT_SECTION_ID";
-var appAdBannerSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_BANNER_SECTION_ID";
-var appAdOfferWallSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_OFFER_WALL_SECTION_ID";
-var appAdInterstitialSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_INTERSTITIAL_SECTION_ID";
-var audioAdSectionId = "REPLACE_THIS_WITH_YOUR_AUDIO_AD_SECTION_ID";
-			
-var showAppAdAlert = function ()
-{
-	window["AdController"]["loadAd"](appAdAlertSectionId);		
-};
-var showAppBanner = function ()
-{
-	window["AdController"]["loadAd"](appAdBannerSectionId);		
-};
-var showAppAdOfferWall = function ()
-{
-	window["AdController"]["loadAd"](appAdOfferWallSectionId);		
-};
-var showAppAdInterstitial = function ()
-{
-	window["AdController"]["loadAd"](appAdInterstitialSectionId);		
-};
-var showAudioAd = function ()
-{
-	window["AdController"]["loadAudioAd"](audioAdSectionId);
-};
-var hideAds = function ()
-{
-	window["AdController"]["destroyAd"]();
-};
+<pre>
+var adUnit = "REPLACE_THIS_WITH_YOUR_AD_UNIT";
+var adUnitFullScreen = "REPLACE_THIS_WITH_YOUR_AD_UNIT";
+var isTest = true;
 
-showAppAdAlert();
-showAppBanner();
-showAppAdOfferWall();
-showAppAdInterstitial();
-showAudioAd();
-hideAds();
+document.addEventListener("deviceready", function(){
+	window.admob.setUp(adUnit, adUnitFullScreen, isTest);
+		
+	window.admob.onFullScreenAdReceived = function() {
+		alert('onFullScreenAdReceived');
+	};
+	window.admob.onFullScreenAdPresented = function() {
+		alert('onFullScreenAdPresented');
+	};
+	window.admob.onFullScreenAdClosed = function() {
+		alert('onFullScreenAdClosed');
+	};
+}, false);
+
+window.admob.preloadBannerAd();
+//position: 'top', 'bottom'
+//size: 'BANNER', 'LARGE_BANNER', 'MEDIUM_RECTANGLE', 'FULL_BANNER', 'LEADERBOARD', 'SKYSCRAPER', 'SMART_BANNER'
+window.admob.showBannerAd('top', 'SMART_BANNER');
+window.admob.showBannerAd('bottom', 'SMART_BANNER');
+window.admob.refreshBannerAd();
+window.admob.hideBannerAd();
+
+window.admob.preloadFullScreenAd();
+window.admob.showFullScreenAd();
+window.admob.refreshFullScreenAd();
+
+</pre>
 
 Example:
 
