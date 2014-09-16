@@ -1,13 +1,10 @@
+<html>
+<head>
+	<script type="text/javascript" src="cordova.js"></script>
+</head>
+<body>
 
-How to Install:
-
-cordova plugin add com.cranberrygame.phonegap.plugin.ad.leadbolt
-
-caution: ios
-
-xcode-Project's Target-Build Phases-Compile Sources-JSONKit.m-Compiler Flags: "-fno-objc-arc" (without quotes)
-
-How to Use:
+<script>
 
 var appAdAlertSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_ALERT_SECTION_ID";
 var appAdBannerSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_BANNER_SECTION_ID";
@@ -39,15 +36,15 @@ var hideAds = function ()
 {
 	window["AdController"]["destroyAd"]();
 };
+	
+</script>
 
-showAppAdAlert();
-showAppBanner();
-showAppAdOfferWall();
-showAppAdInterstitial();
-showAudioAd();
-hideAds();
+<p><button onclick="showAppAdAlert();">showAppAdAlert</button></p>
+<p><button onclick="showAppBanner();">showAppBanner</button></p>
+<p><button onclick="showAppAdOfferWall();">showAppAdOfferWall</button></p>
+<p><button onclick="showAppAdInterstitial();">showAppAdInterstitial</button></p>
+<p><button onclick="showAudioAd();">showAudioAd</button></p>
+<p><button onclick="hideAds();">hideAds</button></p>
 
-Example:
-
-example/index.html
-
+</body>
+</html>

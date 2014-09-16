@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.cranberrygame.phonegap.plugin.ad.leadbolt"
-    version="1.0.3">
+    version="1.0.6">
 	
     <name>Leadbolt</name>
     <description>Leadbolt</description>
@@ -63,7 +63,7 @@
 
 	 <!-- ios -->
 <!--
-xcode-Project's Target-Build Phases-Compile Sources-JSONKit.m-"-fno-objc-arc" (without quotes)
+xcode-Project's Target-Build Phases-Compile Sources-JSONKit.m-Compiler Flags: "-fno-objc-arc" (without quotes)
 -->	 
      <platform name="ios">
 		<js-module src="www/ios/AdController.js">
@@ -87,6 +87,13 @@ xcode-Project's Target-Build Phases-Compile Sources-JSONKit.m-"-fno-objc-arc" (w
 		<source-file src="src/ios/libAppTracker.a" framework="true" />		
 
 		<header-file src="src/ios/LBPhonegapPlugin.h" />
-		<source-file src="src/ios/libLBPhonegapPlugin.a" framework="true" />		
+		<source-file src="src/ios/libLBPhonegapPlugin.a" framework="true" />
+
+		<framework src="AudioToolbox.framework" />
+		<framework src="AVFoundation.framework" />
+		<framework src="AdSupport.framework" />
+		<framework src="SystemConfiguration.framework" />
+		<framework src="CoreMotion.framework" />
+		<framework src="StoreKit.framework" />	
 	</platform>
 </plugin>
