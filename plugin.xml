@@ -2,14 +2,18 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.cranberrygame.phonegap.plugin.ad.leadbolt"
-    version="1.0.6">
+    version="1.0.7">
 	
     <name>Leadbolt</name>
     <description>Leadbolt</description>
     <license>MIT</license>
-    <keywords>phonegap, leadbolt</keywords>
+    <keywords>phonegap, plugin, ad, leadbolt</keywords>
     <repo>https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.ad.leadbolt</repo>
  	
+	<js-module src="www/leadbolt.js">
+		<clobbers target="window.leadbolt" />
+	</js-module>	
+	
     <!-- android -->
 <!--
 //edit your_phonegapcli_project\plugins\com.cranberrygame.phonegap.plugin.ad.leadbolt\src\android\BootReceiver.java

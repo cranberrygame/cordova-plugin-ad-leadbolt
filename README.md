@@ -15,41 +15,20 @@ var appAdBannerSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_BANNER_SECTION_ID";
 var appAdOfferWallSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_OFFER_WALL_SECTION_ID";
 var appAdInterstitialSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_INTERSTITIAL_SECTION_ID";
 var audioAdSectionId = "REPLACE_THIS_WITH_YOUR_AUDIO_AD_SECTION_ID";
-			
-var showAppAdAlert = function ()
-{
-	window["AdController"]["loadAd"](appAdAlertSectionId);		
-};
-var showAppBanner = function ()
-{
-	window["AdController"]["loadAd"](appAdBannerSectionId);		
-};
-var showAppAdOfferWall = function ()
-{
-	window["AdController"]["loadAd"](appAdOfferWallSectionId);		
-};
-var showAppAdInterstitial = function ()
-{
-	window["AdController"]["loadAd"](appAdInterstitialSectionId);		
-};
-var showAudioAd = function ()
-{
-	window["AdController"]["loadAudioAd"](audioAdSectionId);
-};
-var hideAds = function ()
-{
-	window["AdController"]["destroyAd"]();
-};
 
-showAppAdAlert();
-showAppBanner();
-showAppAdOfferWall();
-showAppAdInterstitial();
-showAudioAd();
-hideAds();
+document.addEventListener("deviceready", function(){
+	window.leadbolt.setUp(appAdAlertSectionId, appAdBannerSectionId, appAdOfferWallSectionId, appAdInterstitialSectionId, audioAdSectionId);
+}, false);
+
+window.leadbolt.showAppAdAlert();
+window.leadbolt.showAppBanner();
+window.leadbolt.showAppAdOfferWall();
+window.leadbolt.showAppAdInterstitial();
+window.leadbolt.showAudioAd();
+window.leadbolt.hideAds();
 </pre>
 
 Example:
 
-example/index.html
+<a href="https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.ad.leadbolt/blob/master/example/index.html">example/index.html</a>
 

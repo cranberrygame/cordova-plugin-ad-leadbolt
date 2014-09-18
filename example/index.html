@@ -11,40 +11,18 @@ var appAdBannerSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_BANNER_SECTION_ID";
 var appAdOfferWallSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_OFFER_WALL_SECTION_ID";
 var appAdInterstitialSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_INTERSTITIAL_SECTION_ID";
 var audioAdSectionId = "REPLACE_THIS_WITH_YOUR_AUDIO_AD_SECTION_ID";
-			
-var showAppAdAlert = function ()
-{
-	window["AdController"]["loadAd"](appAdAlertSectionId);		
-};
-var showAppBanner = function ()
-{
-	window["AdController"]["loadAd"](appAdBannerSectionId);		
-};
-var showAppAdOfferWall = function ()
-{
-	window["AdController"]["loadAd"](appAdOfferWallSectionId);		
-};
-var showAppAdInterstitial = function ()
-{
-	window["AdController"]["loadAd"](appAdInterstitialSectionId);		
-};
-var showAudioAd = function ()
-{
-	window["AdController"]["loadAudioAd"](audioAdSectionId);
-};
-var hideAds = function ()
-{
-	window["AdController"]["destroyAd"]();
-};
-	
+
+document.addEventListener("deviceready", function(){
+	window.leadbolt.setUp(appAdAlertSectionId, appAdBannerSectionId, appAdOfferWallSectionId, appAdInterstitialSectionId, audioAdSectionId);
+}, false);
 </script>
 
-<p><button onclick="showAppAdAlert();">showAppAdAlert</button></p>
-<p><button onclick="showAppBanner();">showAppBanner</button></p>
-<p><button onclick="showAppAdOfferWall();">showAppAdOfferWall</button></p>
-<p><button onclick="showAppAdInterstitial();">showAppAdInterstitial</button></p>
-<p><button onclick="showAudioAd();">showAudioAd</button></p>
-<p><button onclick="hideAds();">hideAds</button></p>
+<p><button onclick="window.leadbolt.showAppAdAlert();">showAppAdAlert</button></p>
+<p><button onclick="window.leadbolt.showAppBanner();">showAppBanner</button></p>
+<p><button onclick="window.leadbolt.showAppAdOfferWall();">showAppAdOfferWall</button></p>
+<p><button onclick="window.leadbolt.showAppAdInterstitial();">showAppAdInterstitial</button></p>
+<p><button onclick="window.leadbolt.showAudioAd();">showAudioAd</button></p>
+<p><button onclick="window.leadbolt.hideAds();">hideAds</button></p>
 
 </body>
 </html>
