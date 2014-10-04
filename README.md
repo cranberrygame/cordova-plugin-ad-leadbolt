@@ -1,11 +1,33 @@
+Prerequisite:
+
+<pre>
+</pre>
 
 How to Install:
 
+<pre>
 cordova plugin add com.cranberrygame.phonegap.plugin.ad.leadbolt
+</pre>
 
-caution: ios
+How to install (Crosswalk for android):
 
-xcode-Project's Target-Build Phases-Compile Sources-JSONKit.m-Compiler Flags: "-fno-objc-arc" (without quotes)
+<pre>
+XDK PORJECTS - your_xdk_project - CORDOVA 3.X HYBRID MOBILE APP SETTINGS - PLUGINS AND PERMISSIONS - Third Party Plugins - Add a Third Party Plugin - Get Plugin from the Web -
+
+Name: leadbolt
+Plugin ID: com.cranberrygame.phonegap.plugin.ad.leadbolt
+[v] Plugin is located in the Apache Cordova Plugins Registry
+</pre>
+
+Change Log:
+
+<pre>
+</pre>
+
+To-Do:
+
+<pre>
+</pre>	
 
 How to Use:
 
@@ -32,3 +54,16 @@ Example:
 
 <a href="https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.ad.leadbolt/blob/master/example/index.html">example/index.html</a>
 
+How to test:
+
+<pre>
+</pre>
+
+Download construct2 plugin:
+
+<a href="https://www.scirra.com/">Scirra</a>
+
+Support:
+
+This is 100% Free.<br>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=F9MJ2UY9EKXRN&lc=KR&item_name=Phonegap%20leadbolt%20plugin%20donation&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">You can support maintenance by donation</a>

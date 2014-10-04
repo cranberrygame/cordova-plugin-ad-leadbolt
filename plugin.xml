@@ -81,8 +81,8 @@ xcode-Project's Target-Build Phases-Compile Sources-JSONKit.m-Compiler Flags: "-
 			</feature>			 
 		</config-file>
 		
-		<header-file src="src/ios/JSONKit.h" />
-		<source-file src="src/ios/JSONKit.m" />		
+		<header-file src="src/ios/JSONKit.h" compiler-flags="-fno-objc-arc" />
+		<source-file src="src/ios/JSONKit.m" compiler-flags="-fno-objc-arc" />		
 	
 		<header-file src="src/ios/LeadboltOverlay.h" />
 		<source-file src="src/ios/libLeadboltOverlay.a" framework="true" />		
