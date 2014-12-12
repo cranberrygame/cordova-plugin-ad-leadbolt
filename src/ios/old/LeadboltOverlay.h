@@ -40,13 +40,4 @@
 -(void) setSubid:(NSString *) newsubid;
 
 
-/// Deprecated methods
-//-(void)setSectionid:(NSString *) newsectionid __attribute__((deprecated));
-//-(void)setAdWebView:(UIWebView *) newwebview __attribute__((deprecated));
-//-(void)setCloseBar:(UIToolbar *) newclosebar __attribute__((deprecated));
-//-(void)setFooterBar:(UIToolbar *) newfooterbar __attribute__((deprecated));
-//-(void)setClickCloseBar:(UIToolbar *) newclickclosebar __attribute__((deprecated));
-//-(void)setClickFooterBar:(UIToolbar *) newclickfooterbar __attribute__((deprecated));
-//-(void)setMask:(UIView *) newmask __attribute__((deprecated));
-
 @end

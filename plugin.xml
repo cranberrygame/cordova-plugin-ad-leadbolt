@@ -2,14 +2,19 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.cranberrygame.phonegap.plugin.ad.leadbolt"
-    version="1.0.9">
+    version="1.0.10">
 	
-    <name>Leadbolt</name>
-    <description>Leadbolt</description>
+    <name>Phonegap Leadbolt plugin</name>
+    <description>Phonegap Leadbolt plugin</description>
+    <author>Sang Ki Kwon (Cranberrygame)</author>		
     <license>MIT</license>
     <keywords>phonegap, plugin, ad, leadbolt</keywords>
     <repo>https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.ad.leadbolt</repo>
- 	
+    <issue>https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.ad.leadbolt/issues</issue> 	
+	<engines>
+	    <engine name="cordova" version=">=3.0.0" />
+	</engines>	
+	
 	<js-module src="www/leadbolt.js">
 		<clobbers target="window.leadbolt" />
 	</js-module>	
@@ -80,9 +85,11 @@ xcode-Project's Target-Build Phases-Compile Sources-JSONKit.m-Compiler Flags: "-
 				<param name="onload" value="true" />
 			</feature>			 
 		</config-file>
-		
+
+<!--		
 		<header-file src="src/ios/JSONKit.h" compiler-flags="-fno-objc-arc" />
 		<source-file src="src/ios/JSONKit.m" compiler-flags="-fno-objc-arc" />		
+-->
 	
 		<header-file src="src/ios/LeadboltOverlay.h" />
 		<source-file src="src/ios/libLeadboltOverlay.a" framework="true" />		
