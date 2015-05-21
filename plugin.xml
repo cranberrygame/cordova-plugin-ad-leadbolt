@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.cranberrygame.phonegap.plugin.ad.leadbolt"
-    version="1.0.10">
+    id="com.cranberrygame.cordova.plugin.ad.leadbolt"
+    version="1.0.20">
 	
-    <name>Phonegap Leadbolt plugin</name>
-    <description>Phonegap Leadbolt plugin</description>
+    <name>Cordova Leadbolt plugin</name>
+    <description>show leadbolt app ad (alert, banner, offer wall and full screen) and audio (sdk)</description>
     <author>Sang Ki Kwon (Cranberrygame)</author>		
     <license>MIT</license>
-    <keywords>phonegap, plugin, ad, leadbolt</keywords>
-    <repo>https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.ad.leadbolt</repo>
-    <issue>https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.ad.leadbolt/issues</issue> 	
+    <keywords>cordova,plugin,ad,leadbolt</keywords>
+    <repo>https://github.com/cranberrygame/cordova-plugin-ad-leadbolt</repo>
+    <issue>https://github.com/cranberrygame/cordova-plugin-ad-leadbolt/issues</issue> 	
 	<engines>
 	    <engine name="cordova" version=">=3.0.0" />
 	</engines>	
@@ -21,7 +21,7 @@
 	
     <!-- android -->
 <!--
-//edit your_phonegapcli_project\plugins\com.cranberrygame.phonegap.plugin.ad.leadbolt\src\android\BootReceiver.java
+//edit your_phonegapcli_project\plugins\com.cranberrygame.cordova.plugin.ad.leadbolt\src\android\BootReceiver.java
 ...
 		intent.putExtra("sectionid", "YOUR_REENGAGEMENT_SECTION_ID");
 ...		
