@@ -1,7 +1,9 @@
+Cordova Leadbolt plugin
+====================
 # Overview #
 show leadbolt app ad (alert, banner, offer wall and full screen) and audio (sdk)
 
-[android, ios] [phonegap cli] [crosswalk]
+[android, ios] [phonegap cli] [xdk]
 
 requires leadbolt developer account http://www.leadbolt.com
 
@@ -9,27 +11,40 @@ alert (app ad) demo: http://www.youtube.com/watch?v=Jfmi-SK6OaQ<br>
 offer wall (app ad) demo: http://www.youtube.com/watch?v=4fzCFgo4XaI<br>
 interstitial (app ad) demo: http://www.youtube.com/watch?v=385El4b9Ux4<br>
 audio ad demo: http://www.youtube.com/watch?v=YOntmP0OYCk
-# Server setting #
+
+This is open source cordova plugin.
+
+You can see Plugins For Cordova in one page: http://cranberrygame.github.io?referrer=github
+
+# Change log #
 ```c
 ```
-# Install phonegap plugin #
+# Install plugin #
 
-## Crosswalk ##
+## Cordova cli ##
+```c
+cordova plugin add com.cranberrygame.cordova.plugin.ad.leadbolt
+```
+## Xdk ##
 ```c
 XDK PORJECTS - your_xdk_project - CORDOVA 3.X HYBRID MOBILE APP SETTINGS - PLUGINS AND PERMISSIONS - Third Party Plugins - Add a Third Party Plugin - Get Plugin from the Web -
 
 Name: leadbolt
-Plugin ID: com.cranberrygame.phonegap.plugin.ad.leadbolt
+Plugin ID: com.cranberrygame.cordova.plugin.ad.leadbolt
 [v] Plugin is located in the Apache Cordova Plugins Registry
 ```
-## Phonegap cli ##
-```c
-cordova plugin add com.cranberrygame.phonegap.plugin.ad.leadbolt
-```
+
 ## Phonegap build service (config.xml) ##
 ```c
-not yet supported
+<gap:plugin name="com.cranberrygame.cordova.plugin.ad.leadbolt" source="plugins.cordova.io" />
 ```
+
+## Construct2 ##
+
+# Server setting #
+```c
+```
+
 # API #
 ```javascript
 var appAdAlertSectionId = "REPLACE_THIS_WITH_YOUR_APP_AD_ALERT_SECTION_ID";
@@ -50,16 +65,13 @@ window.leadbolt.showAudioAd();
 window.leadbolt.hideAds();
 ```
 # Examples #
-<a href="https://github.com/cranberrygame/com.cranberrygame.phonegap.plugin.ad.leadbolt/blob/master/example/index.html">example/index.html</a>
+<a href="https://github.com/cranberrygame/cordova-plugin-ad-leadbolt/blob/master/example/index.html">example/index.html</a>
+
 # Test #
 
-# How to build crosswalk and fix build error #
-
-See https://dl.dropboxusercontent.com/u/186681453/howto/how_to_build_crosswalk_and_fix_build_error/index.html
-# Free advertising for games/apps made with crosswalk related c2 plugins (+Phonegap) #
-
-Reply this post, then I'll add your games/apps to the list: https://www.scirra.com/forum/viewtopic.php?t=115517
 # Useful links #
-Crosswalk related c2 plugins (+Phonegap)<br>
-https://www.scirra.com/forum/viewtopic.php?t=109586
+
+Plugins For Cordova<br>
+http://cranberrygame.github.io?referrer=github
+
 # Credits #
