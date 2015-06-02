@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.cranberrygame.cordova.plugin.ad.leadbolt"
-    version="1.0.24">
+    version="1.0.25">
 	
     <name>Cordova Leadbolt plugin</name>
     <description>Show leadbolt app ad (alert, banner, offer wall and full screen) and audio (sdk)</description>
@@ -36,6 +36,7 @@
 				<param name="android-package" value="com.leadbolt.phonegap.android.LBPhonegapPlugin" />
 			</feature>
         </config-file>
+		
         <config-file target="AndroidManifest.xml" parent="/*">
 			<uses-permission android:name="android.permission.INTERNET"/>
 			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -61,13 +62,13 @@
 			</receiver>
         </config-file>
 -->		
-		
-		<source-file src="src/android/nwvlwgbwdtkfcwuk.jar" target-dir="libs" />
-		<source-file src="src/android/LBPhonegapPlugin.jar" target-dir="libs" />
 
 <!--		
 		<source-file src="src/android/BootReceiver.java" target-dir="src" />
 -->
+		
+		<source-file src="src/android/nwvlwgbwdtkfcwuk.jar" target-dir="libs" />
+		<source-file src="src/android/LBPhonegapPlugin.jar" target-dir="libs" />
      </platform>
 
 	 <!-- ios -->
@@ -93,13 +94,10 @@ xcode-Project's Target-Build Phases-Compile Sources-JSONKit.m-Compiler Flags: "-
 	
 		<header-file src="src/ios/LeadboltOverlay.h" />
 		<source-file src="src/ios/libLeadboltOverlay.a" framework="true" />		
-
 		<header-file src="src/ios/AppTracker.h" />
 		<source-file src="src/ios/libAppTracker.a" framework="true" />		
-
 		<header-file src="src/ios/LBPhonegapPlugin.h" />
 		<source-file src="src/ios/libLBPhonegapPlugin.a" framework="true" />
-
 		<framework src="AudioToolbox.framework" />
 		<framework src="AVFoundation.framework" />
 		<framework src="AdSupport.framework" />

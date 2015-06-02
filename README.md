@@ -35,7 +35,7 @@ Plugin ID: com.cranberrygame.cordova.plugin.ad.leadbolt
 ```
 
 ## Cocoon ##
-https://cocoon.io - Create project - [specific project] - Setting - Plugins - Search - cranberrygame - leadbolt
+https://cocoon.io - Create project - [specific project] - Setting - Plugins - Search - cranberrygame - leadbolt - Save
 
 ## Phonegap build service (config.xml) ##
 https://build.phonegap.com/ - Apps - [specific project] - Update code - Zip file including config.xml
