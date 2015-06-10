@@ -37,17 +37,6 @@
 			</feature>
         </config-file>
 		
-        <config-file target="AndroidManifest.xml" parent="/*">
-			<uses-permission android:name="android.permission.INTERNET"/>
-			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-			
-			<!-- Permissions Required if you are using App Re-Engagements -->
-<!--
-			<uses-permission android:name="android.permission.WAKE_LOCK" />
-			<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
--->			
-        </config-file>
-
 <!--		
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
 
@@ -61,7 +50,18 @@
 				</intent-filter>
 			</receiver>
         </config-file>
--->		
+-->	
+		
+        <config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.INTERNET"/>
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+			
+			<!-- Permissions Required if you are using App Re-Engagements -->
+<!--
+			<uses-permission android:name="android.permission.WAKE_LOCK" />
+			<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+-->			
+        </config-file>
 
 <!--		
 		<source-file src="src/android/BootReceiver.java" target-dir="src" />
