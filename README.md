@@ -3,7 +3,7 @@ Cordova Leadbolt plugin
 # Overview #
 show leadbolt app ad (alert, banner, offer wall and full screen) and audio (sdk)
 
-[android, ios] [phonegap cli] [xdk]
+[android, ios] [phonegap cli] [xdk] [cocoon] [phonegap build service]
 
 requires leadbolt developer account http://www.leadbolt.com
 
@@ -14,7 +14,7 @@ audio ad demo: http://www.youtube.com/watch?v=YOntmP0OYCk
 
 This is open source cordova plugin.
 
-You can see Plugins For Cordova in one page: http://cranberrygame.github.io?referrer=github
+You can see Cordova Plugins in one page: http://cranberrygame.github.io?referrer=github
 
 # Change log #
 ```c
@@ -22,28 +22,32 @@ You can see Plugins For Cordova in one page: http://cranberrygame.github.io?refe
 # Install plugin #
 
 ## Cordova cli ##
-https://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface - npm install -g cordova@4.1.2
+https://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface - npm install -g cordova@6.0.0
 ```c
-cordova plugin add com.cranberrygame.cordova.plugin.ad.leadbolt
+cordova plugin add cordova-plugin-ad-leadbolt
+(when build error, use github url: cordova plugin add cordova plugin add https://github.com/cranberrygame/cordova-plugin-ad-leadbolt)
 ```
+
 ## Xdk ##
-https://software.intel.com/en-us/intel-xdk - Download XDK - XDK PORJECTS - [specific project] - CORDOVA 3.X HYBRID MOBILE APP SETTINGS - PLUGINS - Third Party Plugins - Add a Third Party Plugin - Get Plugin from the Web -
+https://software.intel.com/en-us/intel-xdk - Download XDK - XDK PORJECTS - [specific project] - CORDOVA HYBRID MOBILE APP SETTINGS - Plugin Management - Add Plugins to this Project - Third Party Plugins -
 ```c
-Name: leadbolt
-Plugin ID: com.cranberrygame.cordova.plugin.ad.leadbolt
-[v] Plugin is located in the Apache Cordova Plugins Registry
+Plugin Source: Cordova plugin registry
+Plugin ID: cordova-plugin-ad-leadbolt
 ```
 
 ## Cocoon ##
-https://cocoon.io - Create project - [specific project] - Setting - Plugins - Search - cranberrygame - leadbolt - Save
+https://cocoon.io - Create project - [specific project] - Setting - Plugins - Custom - Git Url: https://github.com/cranberrygame/cordova-plugin-ad-leadbolt.git - INSTALL - Save
 
 ## Phonegap build service (config.xml) ##
 https://build.phonegap.com/ - Apps - [specific project] - Update code - Zip file including config.xml
 ```c
-<gap:plugin name="com.cranberrygame.cordova.plugin.ad.leadbolt" source="plugins.cordova.io" />
+<gap:plugin name="cordova-plugin-ad-leadbolt" source="npm" />
 ```
-
 ## Construct2 ##
+Download construct2 plugin<br>
+https://dl.dropboxusercontent.com/u/186681453/pluginsforcordova/index.html<br>
+How to install c2 native plugins in xdk, cocoon and cordova cli<br>
+https://plus.google.com/102658703990850475314/posts/XS5jjEApJYV
 
 # Server setting #
 ```c
@@ -81,6 +85,7 @@ else if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad
 */
 
 document.addEventListener("deviceready", function(){
+
 	window.leadbolt.setUp(appAdAlertSectionId, appAdBannerSectionId, appAdOfferWallSectionId, appAdInterstitialSectionId, audioAdSectionId);
 }, false);
 
@@ -98,7 +103,7 @@ window.leadbolt.hideAds();
 
 # Useful links #
 
-Plugins For Cordova<br>
+Cordova Plugins<br>
 http://cranberrygame.github.io?referrer=github
 
 # Credits #

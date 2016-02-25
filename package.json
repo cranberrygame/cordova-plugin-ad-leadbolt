@@ -1,0 +1,37 @@
+{
+  "name": "cordova-plugin-ad-leadbolt",
+  "version": "1.0.46",
+  "description": "Show leadbolt app ad (alert, banner, offer wall and full screen) and audio (sdk)",
+  "cordova": {
+    "id": "cordova-plugin-ad-leadbolt",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cranberrygame/cordova-plugin-ad-leadbolt.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "ad",
+    "leadbolt",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "cranberrygame",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cranberrygame/cordova-plugin-ad-leadbolt/issues"
+  },
+  "homepage": "https://github.com/cranberrygame/cordova-plugin-ad-leadbolt#readme"
+}
